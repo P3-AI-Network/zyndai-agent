@@ -1,5 +1,5 @@
-from p3ai_agent.agent import AgentConfig, P3AIAgent
-from p3ai_agent.communication import MQTTMessage
+from zyndai_agent.agent import AgentConfig, ZyndAIAgent
+from zyndai_agent.communication import MQTTMessage
 from langchain_openai import ChatOpenAI
 from langchain.memory import ConversationBufferMemory
 from langchain.prompts import ChatPromptTemplate, MessagesPlaceholder
@@ -99,7 +99,7 @@ if __name__ == "__main__":
     )
 
     # Init p3 agent sdk wrapper
-    p3_agent = P3AIAgent(agent_config=agent_config)
+    p3_agent = ZyndAIAgent(agent_config=agent_config)
     
     # Create a langchain agent with stock comparison tool
     llm = ChatOpenAI(model="gpt-3.5-turbo", temperature=0)

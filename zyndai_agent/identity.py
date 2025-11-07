@@ -10,7 +10,7 @@ from langchain.schema import AgentAction, AgentFinish
 
 class IdentityManager:
     """
-    This class manages the identity verification process for P3AI agents.
+    This class manages the identity verification process for ZyndAI agents.
     It interacts with the P3 Identity SDK to verify agent identities.
     """
     

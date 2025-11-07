@@ -1,8 +1,8 @@
 import json
 import requests
-from p3ai_agent.search import SearchAndDiscoveryManager
-from p3ai_agent.identity import IdentityManager
-from p3ai_agent.communication import AgentCommunicationManager
+from zyndai_agent.search import SearchAndDiscoveryManager
+from zyndai_agent.identity import IdentityManager
+from zyndai_agent.communication import AgentCommunicationManager
 from pydantic import BaseModel
 from typing import Optional
 from langchain.agents import AgentExecutor
@@ -17,7 +17,7 @@ class AgentConfig(BaseModel):
     default_outbox_topic: Optional[str] = None
     secret_seed: str = None
 
-class P3AIAgent(SearchAndDiscoveryManager, IdentityManager, AgentCommunicationManager):
+class ZyndAIAgent(SearchAndDiscoveryManager, IdentityManager, AgentCommunicationManager):
 
     def __init__(self, agent_config: AgentConfig): 
 

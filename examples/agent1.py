@@ -1,5 +1,5 @@
-from p3ai_agent.agent import AgentConfig, P3AIAgent
-from p3ai_agent.communication import MQTTMessage
+from zyndai_agent.agent import AgentConfig, ZyndAIAgent
+from zyndai_agent.communication import MQTTMessage
 from langchain_openai import ChatOpenAI
 from langchain.memory import ConversationBufferMemory
 from langchain.agents import initialize_agent, AgentType
@@ -40,13 +40,13 @@ if __name__ == "__main__":
         message_history_limit=100,
         registry_url="https://registry.zynd.ai",
         mqtt_broker_url="mqtt://registry.zynd.ai:1883",
-        identity_credential_path = "/Users/swapnilshinde/Desktop/p3ai/p3ai-agent/examples/identity_credential1.json",
+        identity_credential_path = "zynd-agent/examples/identity_credential1.json",
         secret_seed = os.environ["AGENT1_SEED"]
     )
 
 
     # Init p3 agent sdk wrapper
-    p3_agent = P3AIAgent(agent_config=agent_config)
+    p3_agent = ZyndAIAgent(agent_config=agent_config)
     
     # Created a langchain agent
     llm = ChatOpenAI(model="gpt-3.5-turbo", temperature=0)

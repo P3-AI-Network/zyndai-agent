@@ -1,4 +1,4 @@
-# Agent Discovery and Search Protocol Module for P3AI
+# Agent Discovery and Search Protocol Module for ZyndAI
 import logging
 import requests
 
@@ -23,7 +23,7 @@ class AgentSearchResponse(TypedDict):
 
 class SearchAndDiscoveryManager:
     """
-    This class implements the search and discovery protocol for P3AI agents.
+    This class implements the search and discovery protocol for ZyndAI agents.
     It allows agents to discover each other and share information about their capabilities.
     """
 
